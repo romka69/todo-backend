@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: %i[destroy]
+  before_action :set_task, only: %i[update destroy]
 
   def index
     @tasks = Task.all
@@ -9,6 +9,11 @@ class TasksController < ApplicationController
   def create
     @task = Task.create!(task_params)
     render json: @task, status: :created
+  end
+
+  def update
+    @task.update(task_params)
+    head :no_content
   end
 
   def destroy
