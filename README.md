@@ -1,24 +1,45 @@
-# README
+# Simple API Todo App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple api for Todo App based on [Ruby on Rails](https://rubyonrails.org/) with sqlite database.
 
-Things you may want to cover:
+This is the back-end part of the project. [Front-end here](https://github.com/romka69/todo-backend)
 
-* Ruby version
+![](https://i.imgur.com/TczZ25e.png)
 
-* System dependencies
 
-* Configuration
+## Usage
+1. Run server in developer mode (for use fake data)
+   ```
+   $ cd todo-backend/
+   $ bundle
+   $ rails db:create
+   $ rails db:seed
+   $ rails s
+   ```
 
-* Database creation
+2. Run [Front-end](https://github.com/romka69/todo-backend)
 
-* Database initialization
+## Requirements
+`ruby 2.7.1`
 
-* How to run the test suite
+## Main commands
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Install the dependencies
+```bash
+bundle
+```
 
-* Deployment instructions
+#### Create databases
+```bash
+rails db:create
+```
 
-* ...
+#### Create fake data in developer database
+```bash
+rails db:seed
+```
+
+#### Start the server in developer mode
+```bash
+rails s
+```
