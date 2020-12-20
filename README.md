@@ -2,7 +2,7 @@
 
 Simple api for Todo App based on [Ruby on Rails](https://rubyonrails.org/) with sqlite database.
 
-This is the back-end part of the project. [Front-end here](https://github.com/romka69/todo-backend)
+This is the back-end part of the project. [Front-end here](https://github.com/zakharoff/todo-backend)
 
 ![](https://i.imgur.com/TczZ25e.png)
 
@@ -17,7 +17,7 @@ This is the back-end part of the project. [Front-end here](https://github.com/ro
    $ rails s
    ```
 
-2. Run [Front-end](https://github.com/romka69/todo-backend)
+2. Run [Front-end](https://github.com/zakharoff/todo-backend)
 
 ## Requirements
 `ruby 2.7.1`
