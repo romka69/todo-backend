@@ -8,16 +8,22 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.create!(task_params)
-    render json: @task, status: :created
+
+    ActionCable.server.broadcast "task_channel", task: @task, action: 'create'
+    head :no_content
   end
 
   def update
     @task.update(task_params)
+
+    ActionCable.server.broadcast "task_channel", task: @task, action: 'update'
     head :no_content
   end
 
   def destroy
     @task.destroy
+
+    ActionCable.server.broadcast "task_channel", task: @task, action: 'delete'
     head :no_content
   end
 
